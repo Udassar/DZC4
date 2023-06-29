@@ -6,29 +6,47 @@
 
 
 
-Console.Write("Введите число 1: ");
-int A = int.Parse(Console.ReadLine()!);
-Console.Write("Введите число 2: ");
-int B = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите число 1: ");
+// int A = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите число 2: ");
+// int B = int.Parse(Console.ReadLine()!);
 
-Console.WriteLine($"{GetMultiply(B)}");
+// Console.WriteLine($"{GetMultiply(B)}");
 
 
-int GetMultiply(int limit){
+// int GetMultiply(int limit){
 
-  int result = 1;
-  for (int i = 1; i <= limit; i++)
-  {
-    result = result * A;
-  }
-  return result;
-}
+//   int result = 1;
+//   for (int i = 1; i <= limit; i++)
+//   {
+//     result = result * A;
+//   }
+//   return result;
+// }
 
 
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 // 452 -> 11
 // 82 -> 10
 // 9012 -> 12
+
+Console.Write("Введите число : ");
+int num = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine($"{GetSum(num)}");
+
+int GetSum(int number)
+{
+  int sum = 0;
+  while (number > 0)
+  {
+    sum = sum + number % 10;
+    number /= 10;
+  }
+  return sum;
+}
+
+
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран. (можно указать любой промежуток)
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
